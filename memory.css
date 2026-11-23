@@ -1,0 +1,265 @@
+/* memory */
+h1 {
+    font-size: 60px;
+    font-style: italic;
+}
+
+.card {
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+    display: inline-block;
+    margin: 5px;
+}
+
+#memoryContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    max-width: 700px;
+    margin: 0px auto 100px auto;
+    padding: 10px;
+    background-color: white;
+    z-index: 10;
+    position: relative;
+}
+
+#memoryWrapper {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+
+.card.flipped .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.card-front {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* din baksida */
+}
+
+.card-back {
+    transform: rotateY(180deg);
+    background-size: cover;
+    background-position: center;
+}
+
+/* nytt spel-knapp */
+.button {
+    width: 100px;
+    height: 50px;
+    background-color: #A8BCA1;
+    color: white;
+    font-size: 1.2rem;
+    border-radius: 40px;
+    margin: 15px 0px 30px;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button:active {
+    text-decoration: underline;
+    color: white;
+    box-shadow: 2px 2px rgb(0, 0, 0, 0.5);
+}
+
+#newGame {
+    display: none;
+    /* visas först när spelet startat */
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-family: 'Comic Sans MS', sans-serif;
+    background: #A8BCA1;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+#newGame:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+#newGame:active {
+    transform: scale(0.98);
+}
+
+#numbers {
+    display: none;
+    gap: 25px;
+    justify-content: center;
+}
+
+
+.textToMemoryButtons {
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin: 20px 0px 50px 0px;
+}
+
+#buttonToMemory {
+    display: grid;
+    grid-template-columns: repeat(3, 200px);
+    grid-template-rows: repeat(2, 250px);
+    gap: 80px;
+    justify-content: center;
+    padding: 20px;
+}
+
+/* Knapp för att välja tema på memory */
+#pig {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+
+    background-image: url(../Bilder/greta/house.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#paw {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+
+    background-image: url(../Bilder/paw/paw.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#spidy {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+
+    background-image: url(../Bilder/spidy/marvelSpidy.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#pettson {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+
+    background-image: url(../Bilder/pettson/pettson1.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#bluey {
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+
+    background-image: url(../Bilder/bluey/blueyBackground.png);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+@media (max-width: 1200px) {
+
+    h1 {
+        font-size: 40px;
+    }
+
+    #buttonToMemory {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    #pig,
+    #paw,
+    #spidy,
+    #pettson,
+    #bluey {
+        width: 180px;
+        height: 180px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+@media (max-width: 800px) {
+    #memoryContainer {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+        padding: 5px;
+    }
+
+    .card {
+        width: 80px;
+        height: 80px;
+    }
+
+    #pig,
+    #paw,
+    #spidy,
+    #pettson,
+    #bluey {
+        width: 80px;
+        height: 80px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .textToMemoryButtons {
+        font-size: 12px;
+        margin: 0px;
+    }
+
+    #buttonToMemory {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+        justify-content: center;
+    }
+
+    #newGame {
+        font-size: 14px;
+        width: 80px;
+        height: 35px;
+    }
+}
