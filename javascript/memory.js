@@ -12,63 +12,71 @@ let pairFour = document.getElementById("pairFour");
 let pairSix = document.getElementById("pairSix");
 let pairEight = document.getElementById("pairEight");
 
+
 // === Alla teman ===
 let allPicsMemoryGreta = [
-    "../bilder/greta/george.jpg",
-    "../bilder/greta/greta.jpg",
-    "../bilder/greta/mom.jpg",
-    "../bilder/greta/dad.jpg",
-    "../bilder/greta/grandpa-pig.png",
-    "../bilder/greta/granny.jpg",
-    "../bilder/greta/bunny.png",
-    "../bilder/greta/cat.jpg",
+    "../Bilder/greta/george.jpg",
+    "../Bilder/greta/greta.jpg",
+    "../Bilder/greta/mom.jpg",
+    "../Bilder/greta/dad.jpg",
+    "../Bilder/greta/grandpa-pig.png",
+    "../Bilder/greta/granny.jpg",
+    "../Bilder/greta/bunny.png",
+    "../Bilder/greta/cat.jpg",
+    "../Bilder/greta/friends.jpeg",
+    "../Bilder/greta/picnik.jpeg",
+    "../Bilder/greta/siblings.jpeg",
+    "../Bilder/greta/family.jpeg"
 ];
 
 let allPicsMemoryPawPatrol = [
-    "../bilder/paw/chase.jpg",
-    "../bilder/paw/everest.jpg",
-    "../bilder/paw/marshall.jpg",
-    "../bilder/paw/rocky.jpg",
-    "../bilder/paw/rubble.jpg",
-    "../bilder/paw/sky.jpg",
-    "../bilder/paw/tracker.png",
-    "../bilder/paw/zuma.jpg",
+    "../Bilder/paw/chase.jpg",
+    "../Bilder/paw/everest.jpg",
+    "../Bilder/paw/marshall.jpg",
+    "../Bilder/paw/rocky.jpg",
+    "../Bilder/paw/rubble.jpg",
+    "../Bilder/paw/sky.jpg",
+    "../Bilder/paw/tracker.png",
+    "../Bilder/paw/zuma.jpg",
+    "../Bilder/paw/pawdino.jpg",
+    "../Bilder/paw/pawhero.jpeg",
+    "../Bilder/paw/pawpatrol.jpg"
 ];
 
 let allPicsSpidy = [
-    "../bilder/spidy/gwen.jpg",
-    "../bilder/spidy/hulk.jpg",
-    "../bilder/spidy/friends.jpg",
-    "../bilder/spidy/spidy1.jpg",
-    "../bilder/spidy/spidy2.jpg",
-    "../bilder/spidy/spidy.jpg",
-    "../bilder/spidy/spidy3.jpg",
-    "../bilder/spidy/hulk1.jpg",
+    "../Bilder/spidy/gwen.jpg",
+    "../Bilder/spidy/hulk.jpg",
+    "../Bilder/spidy/friends.jpg",
+    "../Bilder/spidy/spidy1.jpg",
+    "../Bilder/spidy/spidy2.jpg",
+    "../Bilder/spidy/spidy.jpg",
+    "../Bilder/spidy/spidy3.jpg",
+    "../Bilder/spidy/hulk1.jpg",
 ];
 
 let allPicsPettson = [
-    "../bilder/pettson/pettson1.jpg",
-    "../bilder/pettson/pettson2.jpg",
-    "../bilder/pettson/pettson3.jpg",
-    "../bilder/pettson/pettson4.jpg",
-    "../bilder/pettson/pettson5.jpg",
-    "../bilder/pettson/pettson6.jpg",
-    "../bilder/pettson/pettson7.jpg",
-    "../bilder/pettson/findus.jpg",
+    "../Bilder/pettson/pettson1.jpg",
+    "../Bilder/pettson/pettson2.jpg",
+    "../Bilder/pettson/pettson3.jpg",
+    "../Bilder/pettson/pettson4.jpg",
+    "../Bilder/pettson/pettson5.jpg",
+    "../Bilder/pettson/pettson6.jpg",
+    "../Bilder/pettson/pettson7.jpg",
+    "../Bilder/pettson/findus.jpg",
 ];
 
 let allPicsBluey = [
-    "../bilder/bluey/bluey2.png",
-    "../bilder/bluey/bluey3.jpg",
-    "../bilder/bluey/bluey4.jpg",
-    "../bilder/bluey/bluey5.png",
-    "../bilder/bluey/bluey6.jpg",
-    "../bilder/bluey/bluey7.jpg",
-    "../bilder/bluey/bluey8.png",
-    "../bilder/bluey/bluey9.png",
-    "../bilder/bluey/bluey10.png",
-    "../bilder/bluey/bluey11.png",
-];
+    "../Bilder/bluey/bluey2.png",
+    "../Bilder/bluey/bluey3.jpg",
+    "../Bilder/bluey/bluey4.jpg",
+    "../Bilder/bluey/bluey5.png",
+    "../Bilder/bluey/bluey6.jpg",
+    "../Bilder/bluey/bluey7.jpg",
+    "../Bilder/bluey/bluey8.png",
+    "../Bilder/bluey/bluey9.png",
+    "../Bilder/bluey/bluey10.png",
+    "../Bilder/bluey/bluey11.png",
+]
 
 // === Speldata ===
 let currentThemeImages = [];
@@ -134,31 +142,31 @@ pairEight.addEventListener("click", function () {
 
 // === Event listeners för teman ===
 memoryGreta.addEventListener("click", function () {
-    currentBackImage = "../bilder/greta/house.jpg";
+    currentBackImage = "../Bilder/greta/house.jpg";
     currentThemeImages = allPicsMemoryGreta;
     startNewGame();
 });
 
 memoryPaw.addEventListener("click", function () {
-    currentBackImage = "../bilder/paw/paw.png";
+    currentBackImage = "../Bilder/paw/paw.png";
     currentThemeImages = allPicsMemoryPawPatrol;
     startNewGame();
 });
 
 memorySpidy.addEventListener("click", function () {
-    currentBackImage = "../bilder/spidy/spidyLogo.png";
+    currentBackImage = "../Bilder/spidy/spidyLogo.png";
     currentThemeImages = allPicsSpidy;
     startNewGame();
 });
 
 memoryPettson.addEventListener("click", function () {
-    currentBackImage = "../bilder/pettson/pettsonBakgrund.jpg";
+    currentBackImage = "../Bilder/pettson/pettsonBakgrund.jpg";
     currentThemeImages = allPicsPettson;
     startNewGame();
 });
 
 memoryBluey.addEventListener("click", function () {
-    currentBackImage = "../bilder/bluey/BlueyLogo.jpg";
+    currentBackImage = "../Bilder/bluey/BlueyLogo.jpg";
     currentThemeImages = allPicsBluey;
     startNewGame();
     numbers.style.display = "flex";
@@ -177,6 +185,7 @@ newGameButton.addEventListener("click", function () {
         setTimeout(() => {
             startNewGame();
         }, 500);
+
     }, 500);
 });
 
@@ -218,11 +227,7 @@ function memoryCards() {
         let card = allCards[i];
 
         card.addEventListener("click", function () {
-            if (
-                lockBoard ||
-                card.classList.contains("matched") ||
-                card.classList.contains("flipped")
-            ) {
+            if (lockBoard || card.classList.contains("matched") || card.classList.contains("flipped")) {
                 return;
             }
 
@@ -239,7 +244,7 @@ function memoryCards() {
                 if (img1 === img2) {
                     card1.classList.add("matched");
                     card2.classList.add("matched");
-                    new Audio("Ljud/win.wav").play();
+                    new Audio("../Ljud/win.wav").play();
                     flippedCards = [];
                     lockBoard = false;
                 } else {

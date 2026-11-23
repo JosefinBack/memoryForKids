@@ -1,0 +1,224 @@
+@font-face {
+    font-family: Garamond;
+    src: url("../Font/CormorantGaramond-VariableFont_wght.ttf");
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+body {
+    margin: 0px;
+    max-width: 1300px;
+    /* background-color: #FDF8EE; */
+    font-family: Garamond;
+    margin-left: auto;
+    margin-right: auto;
+
+    background-image: url("../Bilder/leaf.png");
+    background-repeat: repeat;
+    background-size: auto;
+    background-attachment: fixed;
+    /*gör att bakgrunden stannar vid scroll */
+}
+
+h1 {
+    text-align: center;
+}
+
+main {
+    background-color: rgba(255, 255, 255, 0.7);
+    height: 100%;
+    border-radius: 20px;
+}
+
+/* header */
+#topMenu {
+    display: flex;
+    gap: 20px;
+    justify-content: end;
+    padding: 20px 40px;
+}
+
+.menyButton {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    color: #7E6651;
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid #7E6651;
+    border-radius: 25px;
+    background: #A8BCA1;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.menyButton:hover {
+    background: #A8BCA1;
+    color: #F9F5F0;
+}
+
+/* Dropdown-behållare */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown-innehåll */
+.dropdown-content {
+    display: none;
+    font-weight: bold;
+    position: absolute;
+    background-color: #F9F5F0;
+    min-width: 160px;
+    border: 1px solid #7E6651;
+    border-radius: 10px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 5;
+}
+
+.dropdown-content a {
+    color: #7E6651;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #A8BCA1;
+    color: #F9F5F0;
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+#headerFront {
+    height: 350px;
+    width: 100%;
+    position: relative;
+    background-image: url("../Bilder/corner5.png");
+    background-size: 1440px 400px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#menuToggle {
+    display: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border: 3px solid black;
+    border-radius: 8px;
+    padding: 10px
+}
+
+footer {
+    height: 80px;
+}
+
+/* ipad-view */
+@media (max-width: 1100px) {
+    #headerFront {
+        height: 300px;
+        width: 100%;
+        position: relative;
+
+        background-image: url("../Bilder/corner5.png");
+        background-size: 1100px 300px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    #topMenu {
+        display: flex;
+        gap: 20px;
+        justify-content: end;
+        padding: 30px 40px;
+    }
+}
+
+/* Mobilvy */
+@media (max-width: 900px) {
+    #menuToggle {
+        display: inline-block;
+        cursor: pointer;
+        background: #A8BCA1;
+        border: 1px solid #7E6651;
+        padding: 8px 16px;
+        border-radius: 25px;
+        font-family: 'Cormorant Garamond', serif;
+    }
+
+    #topMenu {
+        display: none;
+        flex-direction: column;
+        align-items: flex-start;
+        position: absolute;
+        top: 40px;
+        width: 150px;
+        padding: 10px;
+        gap: 10px;
+        border: 1px solid #7E6651;
+        background-color: #F9F5F0;
+        border-radius: 10px;
+        z-index: 5;
+    }
+
+    #topMenu.show {
+        display: flex;
+    }
+
+    .dropdown {
+        width: 100%;
+    }
+
+    .dropdown-content {
+        position: static;
+        background: none;
+        border: none;
+        box-shadow: none;
+        display: none;
+        width: 100%;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropdown-content a {
+        padding-left: 20px;
+        display: block;
+    }
+
+    .menyButton {
+        width: 80px;
+    }
+
+
+    #headerFront {
+        height: 200px;
+        width: 100%;
+        position: relative;
+
+        background-image: url("../Bilder/corner5.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+}
+
+/* Desktop: visa meny som vanligt
+@media (min-width: 901px) {
+    #topMenu {
+        display: flex !important;
+    }
+
+    #menuToggle {
+        display: none;
+    }
+} */

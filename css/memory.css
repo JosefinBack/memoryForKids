@@ -123,74 +123,37 @@ h1 {
     text-align: center;
     font-size: 25px;
     font-weight: bold;
-    margin: 20px 0px 50px 0px;
+    margin: 20px 0px;
 }
 
 #buttonToMemory {
     display: grid;
-    grid-template-columns: repeat(3, 200px);
-    grid-template-rows: repeat(2, 250px);
-    gap: 80px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
     justify-content: center;
     padding: 20px;
+
+    border: 1px solid red;
 }
 
 /* Knapp för att välja tema på memory */
+
+.cardSize {
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.cardPicture {
+    object-fit: cover;
+    height: 300px;
+    width: 100%;
+}
+
 #pig {
-    height: 200px;
-    width: 200px;
-    cursor: pointer;
-
-    background-image: url(../Bilder/greta/house.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-color: pink;
 }
-
-#paw {
-    height: 200px;
-    width: 200px;
-    cursor: pointer;
-
-    background-image: url(../Bilder/paw/paw.png);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#spidy {
-    height: 200px;
-    width: 200px;
-    cursor: pointer;
-
-    background-image: url(../Bilder/spidy/marvelSpidy.jpg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#pettson {
-    height: 200px;
-    width: 200px;
-    cursor: pointer;
-
-    background-image: url(../Bilder/pettson/pettson1.jpg);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-#bluey {
-    height: 200px;
-    width: 200px;
-    cursor: pointer;
-
-    background-image: url(../Bilder/bluey/blueyBackground.png);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
 
 @media (max-width: 1200px) {
 
